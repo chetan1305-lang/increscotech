@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.css';
+import Filters from './components/Filters';
+import Categories from './components/Categories';
+import Brands from './components/Brands';
+import Price from './components/Price';
+import Products from './components/Products';
+import Search from './components/Search';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="container-fliud mx-2">
+        <div className="row mt-5 mx-2">
+          <div className="col-md-4">
+            <Filters/>
+            <Categories/>
+            <Brands/>
+            <Price/>
+          </div>
+          <div className="col-md-8">
+              <div className="row">
+                <Products/>
+              </div>
+          </div>
+        </div>
+      </div>
   );
 }
 
